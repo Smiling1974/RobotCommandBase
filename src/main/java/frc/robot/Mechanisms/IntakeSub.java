@@ -5,6 +5,7 @@ import java.io.ObjectInputFilter.Config;
 import com.ctre.phoenix6.configs.TalonFXConfiguration;
 import com.ctre.phoenix6.hardware.TalonFX;
 
+import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Mechanisms.MechanismsConstants.IntakeConstants;
 import frc.robot.Mechanisms.MechanismsConstants.IntakeboxConstants;
@@ -12,7 +13,7 @@ import frc.robot.Mechanisms.MechanismsConstants.IntakeboxConstants;
 public class IntakeSub extends SubsystemBase {
 
     private final TalonFX intakeMotor = new TalonFX(IntakeConstants.intakeId);
-    private final TalonFX intakeboxMotor = new TalonFX(IntakeConstants.intakeboxId);
+    private final TalonFX intakeboxMotor = new TalonFX(IntakeboxConstants.intakeboxId);
 
 
     //faltan las constantes
@@ -53,6 +54,16 @@ public class IntakeSub extends SubsystemBase {
         intakeMotor.set(0);
         intakeboxMotor.set(0);
     }
+
+    public Command runIntakeCommand(double speed) {
+        return this.run(() -> setIntakeSpeed(speed))
+                   .finallyDo(() -> stopIntake());
+    }
+
+    public Command stopIntakeCommand() {
+        return this.runOnce(this::stopIntake);
+    }
+
     @Override
     public void periodic() {
     }
