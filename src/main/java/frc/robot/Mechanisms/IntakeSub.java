@@ -1,7 +1,5 @@
 package frc.robot.Mechanisms;
 
-import java.io.ObjectInputFilter.Config;
-
 import com.ctre.phoenix6.configs.TalonFXConfiguration;
 import com.ctre.phoenix6.hardware.TalonFX;
 
@@ -38,7 +36,7 @@ public class IntakeSub extends SubsystemBase {
         intakeboxMotorConfig.Slot0.kG = IntakeboxConstants.kG;
         intakeboxMotorConfig.Slot0.kV = IntakeboxConstants.kV;
         intakeboxMotorConfig.Slot0.kA = IntakeboxConstants.kA;
-        intakeboxMotor.applyConfig(intakeboxMotorConfig);
+        intakeboxMotor.getConfigurator().apply(intakeboxMotorConfig);
     }
 
     public void setIntakeSpeed(double speed) {
@@ -57,3 +55,4 @@ public class IntakeSub extends SubsystemBase {
     public void periodic() {
     }
 }
+
