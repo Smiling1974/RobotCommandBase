@@ -53,3 +53,19 @@ public class OutakeConstants {
 
 
 }
+
+public final class Constants {
+
+  public static class IndexConstants{
+
+    public static final int index_motor_id = 0;
+
+    public static final double kP = 0.0;
+    public static final double kI = 0.0;
+    public static final double kD = 0.0;  
+    public static final double kS = 0.0;
+    public static final double kV = 0.0;
+    public static final double kA = 0.0;
+
+  }
+  }
