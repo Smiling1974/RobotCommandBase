@@ -16,6 +16,8 @@ import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.DriveTrain.CommandSwerveDrivetrain;
 import frc.robot.DriveTrain.SwerveConstants;
+import frc.robot.Mechanisms.IndexSub;
+import frc.robot.Mechanisms.IntakeSub;
 
 public class RobotContainer {
 
@@ -31,9 +33,9 @@ public class RobotContainer {
     );
   
 
-  private final Outake outake;
-  private final Flywheels flywheels;
-  private final Intake intake;
+  private final OutakeSub outake = new OutakeSub();
+  private final IndexSub flywheels = new IndexSub();
+  private final IntakeSub intake = new IntakeSub();
 
   private final SendableChooser<Command> autoChooser;
 

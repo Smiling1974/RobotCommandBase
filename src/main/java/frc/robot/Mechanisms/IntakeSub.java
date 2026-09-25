@@ -1,5 +1,7 @@
 package frc.robot.Mechanisms;
 
+import java.io.ObjectInputFilter.Config;
+
 import com.ctre.phoenix6.configs.TalonFXConfiguration;
 import com.ctre.phoenix6.hardware.TalonFX;
 
@@ -55,4 +57,3 @@ public class IntakeSub extends SubsystemBase {
     public void periodic() {
     }
 }
-
