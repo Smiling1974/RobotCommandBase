@@ -16,7 +16,7 @@ public class OutakeSub extends SubsystemBase {
     //faltan las constantes
     public OutakeSub() {
         TalonFXConfiguration OutakeMotorConfig = new TalonFXConfiguration();
-        OutakeMotorConfig.MotorOutput.Inverted = OutakeConstants.OutakeInversion;
+        OutakeMotorConfig.MotorOutput.Inverted = OutakeConstants.outakeInversion;
         OutakeMotorConfig.Slot0.kP = OutakeConstants.kP;
         OutakeMotorConfig.Slot0.kI = OutakeConstants.kI;
         OutakeMotorConfig.Slot0.kD = OutakeConstants.kD;   
@@ -25,7 +25,6 @@ public class OutakeSub extends SubsystemBase {
         OutakeMotorConfig.Slot0.kV = OutakeConstants.kV;
         OutakeMotorConfig.Slot0.kA = OutakeConstants.kA;
         outakeMotor.getConfigurator().apply(OutakeMotorConfig);
-        //checar applyConfig, actuators?
 
     }
 

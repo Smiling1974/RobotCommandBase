@@ -7,7 +7,6 @@ public class MechanismsConstants {
     public class IntakeConstants {
 
     public static final int intakeId = 10;
-    public static final int intakeboxId = 11;
 
     public static final InvertedValue intakeInversion =
             InvertedValue.CounterClockwise_Positive;
@@ -38,9 +37,9 @@ public class IntakeboxConstants {
 
 public class OutakeConstants {
 
-    public static final int intakeboxId = 11;
+    public static final int OutakeId = 12;
 
-    public static final InvertedValue intakeboxInversion =
+    public static final InvertedValue outakeInversion =
             InvertedValue.CounterClockwise_Positive;
 
     public static final double kP = 0.0;
